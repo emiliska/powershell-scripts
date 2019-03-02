@@ -11,8 +11,7 @@
 # ex: ./group_name_generator.ps1 .\words.txt
 Param(
     [Parameter(Mandatory=$true,
-    ValueFromPipeline=$true,
-    Position=0)]
+    ValueFromPipeline=$true)]
     [String[]]
     $textFile
 )
@@ -50,7 +49,7 @@ foreach ($word in $word_array) {
 }
 
 # save to working file
-Out-File -FilePath .\newPhrases.txt -InputObject $newPhrase -Encoding ascii -Width 80 -Append
+Out-File -FilePath .\newPhrases.txt -InputObject $newPhrase -Append
 #print out the new phrase
 Write-Output $newPhrase
 
