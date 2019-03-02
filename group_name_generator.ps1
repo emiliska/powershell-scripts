@@ -11,7 +11,8 @@
 # ex: ./group_name_generator.ps1 .\words.txt
 Param(
     [Parameter(Mandatory=$true,
-    ValueFromPipeline=$true)]
+    ValueFromPipeline=$true,
+    Position=0)]
     [String[]]
     $textFile
 )
